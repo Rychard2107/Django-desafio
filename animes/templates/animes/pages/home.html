@@ -1,27 +1,11 @@
+{% extends "global/base.html" %}
 
-    {% include 'animes/partials/head.html' %}
-    <body>
-        {% include 'animes/partials/header.html' %}
-        <main class="main-content-section">
-            <div class="grid-container">
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
-                {% include 'animes/partials/anime-window.html' %}
+{% block title %}Home | {% endblock title %}
 
-            </div>              
-        </main>
-        {%include 'animes/partials/footer.html'%}
-        
-    </body>
-</html>
+{% block  content %}
+<div class="grid-container">
+    {% for anime in animes %}
+        {% include 'animes/partials/anime-window.html' %}
+    {% endfor %}
+</div>      
+{% endblock content %}          

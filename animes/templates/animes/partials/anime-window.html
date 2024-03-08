@@ -1,24 +1,31 @@
 <div class="window anime">
     <div class="main-img">
-        <img src="https://placehold.co/600x400.png" alt="Temporário">
+        <img src="{{anime.image.url}}" alt="Temporário">
         <div class="anime-title link-anima">
-            <h2><a href="/anime/1/">Nome do anime</a></h2>                    
+            <h2><a href="/anime/{{anime.id}}/">{{anime.nomeanime}}</a></h2>                    
         </div>
     </div>
     <div class="anime-info">
         <div class="author-info">
             <div class="link-anima">
                 <i class="fa-solid fa-user"> </i>
-                <a href="#">Usuário</a>
+                <a href="#">{{anime.author.first_name}} {{anime.author.last_name}}</a>
             </div>
             <div>
                 <i class="fa-solid fa-calendar-days"> </i>
-                <span>##/##/####</span>
+                <span>{{anime.datacriacao|date:"d/m/Y"}}</span>
             </div>
         </div>
-        <ul class="text-color">
-            <li class="link-anima">Categoria: <a href="#">Romance</a></li>
-            <li>Episódios: **</li>
-        </ul>
+        {%if is_resume_page is not True%}
+            <ul class="text-color">
+                <li class="link-anima">Gênero: <a href="#">{{anime.genero}}</a></li>
+                <li>Episódios: {{anime.episodios}}</li>
+            </ul>
+        {%endif%}
+        {%if is_resume_page is True%}
+            <div class="resumeanime">
+                {{anime.resumo}}
+            </div>
+        {%endif%}
     </div>
 </div>

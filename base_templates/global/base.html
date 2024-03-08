@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        {% include 'animes/partials/head.html' %}
+        <title>{% block title %}{% endblock title %} Fire Animes</title>
+    </head>
+    <body>
+        {% include 'animes/partials/header.html' %}
+        <main class="main-content-section">
+            {% block content %}{% endblock content %}         
+        </main>
+        {%include 'animes/partials/footer.html'%}
+    </body>
+</html>
