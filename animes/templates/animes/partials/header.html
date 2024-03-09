@@ -1,10 +1,12 @@
 <header class="header-content-conteiner">
     <div class="header-content" >
-        <div class="width-form"></div>
+        <div class="width-form">
+            <a href="{% url 'animes:create' %}">Criar anime</a>
+        </div>
         <h1 class="heading">
             <i class="fa-solid fa-fire-flame-curved heading"></i>
             <span class='link-anima'>
-                <a href="{% url 'anime-home'%}">Fire animes</a>
+                <a href="/">Fire animes</a>
             </span>
         </h1>
         <form action="" class="search-form width-form">

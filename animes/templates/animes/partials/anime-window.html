@@ -22,7 +22,7 @@
         </div>
         {%if is_resume_page is not True%}
             <ul class="text-color">
-                <li class="link-anima">Gênero: <a href="#">{{anime.genero}}</a></li>
+                <li class="link-anima">Gênero: <a href="{% url "animes:genero" anime.genero_id %}">{{anime.genero}}</a></li>
                 <li>Episódios: {{anime.episodios}}</li>
             </ul>
         {%endif%}

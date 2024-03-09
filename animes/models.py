@@ -9,7 +9,7 @@ class Genero(models.Model):
         return (self.genero)
 
 
-class anime(models.Model):
+class Anime(models.Model):
     nome_anime = models.CharField(max_length=65)
     slug = models.SlugField()
     resumo = models.TextField()
