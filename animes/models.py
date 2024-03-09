@@ -22,7 +22,7 @@ class Anime(models.Model):
         Genero, on_delete=models.SET_NULL, null=True
     )
     author = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True
+        User, on_delete=models.SET_NULL, blank=True, null=True
     )
     episodios = models.IntegerField()
 
