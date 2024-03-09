@@ -1,8 +1,8 @@
 <div class="window anime">
     <div class="main-img">
-        <img src="{{anime.img_anime}}" alt="Foto_anime">
+        <img src="media/{{anime.img_anime}}" alt="Foto_anime">
         <div class="anime-title link-anima">
-            <h2><a href="/anime/{{ anime.id }}/">{{ anime.nome_anime }}</a></h2>                    
+            <h2><a href="/anime/{{ anime.nome_anime }}/">{{ anime.nome_anime }}</a></h2>                    
         </div>
     </div>
     <div class="anime-info">
@@ -22,7 +22,7 @@
         </div>
         {%if is_resume_page is not True%}
             <ul class="text-color">
-                <li class="link-anima">Gênero: <a href="{% url "animes:genero" anime.genero_id %}">{{anime.genero}}</a></li>
+                <li class="link-anima">Gênero: <a href="{% url 'animes:genero' genero_id=anime.genero.id %}">{{anime.genero}}</a></li>
                 <li>Episódios: {{anime.episodios}}</li>
             </ul>
         {%endif%}

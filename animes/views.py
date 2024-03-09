@@ -1,6 +1,5 @@
 from datetime import timezone
 from django.shortcuts import render, redirect
-from utils.animes.factory import make_fake_anime
 from .models import Anime
 from django.forms import modelform_factory
 from django.utils.text import slugify
@@ -22,9 +21,12 @@ def genero(request, genero_id):
     })
 
 
-def detail(request, id):
+def detail(request, anime_id):
+    animes = Anime.objects.filter(
+        anime__id=anime_id
+    )
     return render(request, 'animes/pages/anime-view.html', context={
-        'anime': make_fake_anime(),
+        'animes': animes,
         'is_resume_page': True,
     })
 
