@@ -55,6 +55,14 @@ Essa página contem um bug que não encontra a foto cadastrada por reutilizaçã
 Ao clicar no nome do anime ele deve renonar para uma página com os detalhes incluindo o resumo criado.
 Essa página contem um bug não esperado que por falta de conhecimento não consegui resolver.
 
+O plano inicial era implementar uma api chamada jikanpy, que iria retornar os animes no search localizado a direita da header,
+não consegui implementar.
+Coisas a melhorar:
+  * Enfrentei muitos bugs relacionados as urls e views, e conflitos de nomes. Isso me custou tempo precioso, preciso estudar os conseitos básicos de cada arquivo e nomeação.
+  * Aprender mais rápido lendo documentação.
+  * Criação de testes.
+  * Criar códigos com autenticações e melhorias de segurança.
+ 
 
 
 
