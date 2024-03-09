@@ -11,6 +11,9 @@
     --info-text-color: #ADACAC;
 }
 
+.color-white a {
+    color:var(--white)
+}
 * {
     margin: 0;
     padding: 0;
