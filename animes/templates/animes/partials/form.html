@@ -1,9 +1,8 @@
 
-<form action="" method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  <h2>Criar Anime</h2>
-    Nome do anime:<br/><input name="nome_anime" type="text"><br/>
-    Resumo:<br/><input name="resumo" type="text"><br/>
-    Imagem:<br/><input name="imagem" type="image"><br/>
-  <button type="submit">Criar Anime</button>
+<h1>Criar Anime</h1>
+
+<form action="{% url 'animes:create' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Criar</button>
 </form>

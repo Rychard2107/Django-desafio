@@ -2,7 +2,9 @@
     <div class="main-img">
         <img src="media/{{anime.img_anime}}" alt="Foto_anime">
         <div class="anime-title link-anima">
-            <h2><a href="/anime/{{ anime.nome_anime }}/">{{ anime.nome_anime }}</a></h2>                    
+            <h2><a href="{% url 'animes:detail' anime.id %}">
+                {{ anime.nome_anime }}
+            </a></h2>                    
         </div>
     </div>
     <div class="anime-info">

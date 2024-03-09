@@ -1,8 +1,8 @@
-from datetime import timezone
 from django.shortcuts import render, redirect
 from .models import Anime
 from django.forms import modelform_factory
 from django.utils.text import slugify
+from django.utils import timezone
 
 
 def home(request):
@@ -21,9 +21,9 @@ def genero(request, genero_id):
     })
 
 
-def detail(request, anime_id):
+def detail(request, id):
     animes = Anime.objects.filter(
-        anime__id=anime_id
+       __id=id
     )
     return render(request, 'animes/pages/anime-view.html', context={
         'animes': animes,
@@ -41,6 +41,7 @@ def create_anime(request):
             anime.slug = slugify(anime.nome_anime)
             anime.data_criacao = timezone.now()
             anime.save()
+
             return redirect('animes:home')
     else:
         form = AnimeForm()

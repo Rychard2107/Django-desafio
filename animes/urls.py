@@ -10,7 +10,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('animes/genero/<int:genero_id>/', views.genero, name="genero"),
     path('animes/create/', views.create_anime, name="create"),
-    path('<str:nome_anime>/', views.detail, name='detail'),
+    path('<int:id>/', views.detail, name='detail'),
 ]
 
 
