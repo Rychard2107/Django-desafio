@@ -14,8 +14,8 @@ def make_fake_anime():
             'last_name': fake.last_name(),
         },
         'genero': fake.word(),
-        'imagem': {
+        'img_anime': {
             'url': 'https://loremflickr.com/320/240',
         },
-        'episodios': fake.random_number(digits=2, fix_len=True),       
-    } 
+        'episodios': fake.random_number(digits=2, fix_len=True),
+    }

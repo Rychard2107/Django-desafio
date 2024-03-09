@@ -1,4 +1,4 @@
-from animes.models import Genero, Anime
+from animes.models import Genero, anime
 from django.contrib import admin
 
 
@@ -6,7 +6,7 @@ class GeneroAdmin(admin.ModelAdmin):
     ...
 
 
-@admin.register(Anime)
+@admin.register(anime)
 class AnimeAdmin(admin.ModelAdmin):
     ...
 

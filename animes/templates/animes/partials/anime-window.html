@@ -1,19 +1,23 @@
 <div class="window anime">
     <div class="main-img">
-        <img src="{{anime.imagem.url}}" alt="Temporário">
+        <img src="{{anime.img_anime}}" alt="Foto_anime">
         <div class="anime-title link-anima">
-            <h2><a href="/anime/{{anime.id}}/">{{anime.nome_anime}}</a></h2>                    
+            <h2><a href="/anime/{{ anime.id }}/">{{ anime.nome_anime }}</a></h2>                    
         </div>
     </div>
     <div class="anime-info">
         <div class="author-info">
             <div class="link-anima">
                 <i class="fa-solid fa-user"> </i>
-                <a href="#">{{anime.author.first_name}} {{anime.author.last_name}}</a>
+                {%if anime.author.first_name %}
+                    <a href="#">{{ anime.author.first_name }} {{ anime.author.last_name }}</a>
+                {% else %}
+                    <a href="#">{{ anime.author.username }}</a>
+                {% endif %}
             </div>
             <div>
                 <i class="fa-solid fa-calendar-days"> </i>
-                <span>{{anime.data|date:"d/m/Y"}}</span>
+                <span>{{anime.data_criacao|date:"d/m/Y"}}</span>
             </div>
         </div>
         {%if is_resume_page is not True%}
